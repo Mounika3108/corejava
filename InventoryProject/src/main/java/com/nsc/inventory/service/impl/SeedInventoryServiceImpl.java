@@ -27,6 +27,7 @@ public class SeedInventoryServiceImpl implements SeedInventoryService {
     @Override
     public SeedInventoryDto createSeedInventory(SeedInventoryDto dto) {
         SeedInventory entity = new SeedInventory();
+        System.out.println("method is created.....");
         BeanUtils.copyProperties(dto, entity);
         return convertToDTO(repository.save(entity));
     }
